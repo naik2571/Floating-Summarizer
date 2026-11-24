@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_summary_card"
+    android:elevation="16dp">
+
+    <!-- Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_ai_sparkle"
+            app:tint="#A855F7"
+            android:contentDescription="AI Icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="AI Screen Summary"
+            android:textColor="#F8FAFC"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Read time saved badge -->
+        <TextView
+            android:id="@+id/tvTimeSavedBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2E1065"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:textColor="#C4B5FD"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="Saved ~1 min"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/btnCloseOverlay"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_close"
+            app:tint="#94A3B8"
+            android:contentDescription="Close" />
+    </LinearLayout>
+
+    <!-- Headline / Context -->
+    <TextView
+        android:id="@+id/tvHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Key Highlights from Screen"
+        android:textColor="#E2E8F0"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Scrollable Bullet Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="260dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutBulletsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Bottom Actions Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="14dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tvWordCountInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="340 words → 72 words"
+            android:textColor="#64748B"
+            android:textSize="11sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopySummary"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="📋 Copy Summary"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:backgroundTint="#7C3AED"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+</LinearLayout>

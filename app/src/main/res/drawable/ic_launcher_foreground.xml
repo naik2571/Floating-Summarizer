@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Document Card -->
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M34,26 h26 l14,14 v42 a6,6 0 0,1 -6,6 h-34 a6,6 0 0,1 -6,-6 v-50 a6,6 0 0,1 6,-6 z" />
+    <!-- Document Fold -->
+    <path
+        android:fillColor="#4338CA"
+        android:pathData="M60,26 v14 h14 z" />
+    <!-- Text Summary Lines -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M40,50 h18 M40,60 h26 M40,70 h14" />
+    <!-- AI Sparkle Star -->
+    <path
+        android:fillColor="#FACC15"
+        android:pathData="M76,22 L78,30 L86,32 L78,34 L76,42 L74,34 L66,32 L74,30 Z" />
+</vector>

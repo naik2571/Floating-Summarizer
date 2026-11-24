@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AI Screen Summarizer</string>
+    <string name="app_subtitle">Floating One-Tap Screen Summary &amp; Key Highlights</string>
+    <string name="accessibility_service_description">Extracts readable text nodes on screen when the user taps the floating AI orb to produce instant key takeaways.</string>
+</resources>
