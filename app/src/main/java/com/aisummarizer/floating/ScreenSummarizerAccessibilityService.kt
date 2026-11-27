@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.WindowManager
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
+import android.os.Build
 
 /**
  * Intelligent Accessibility Screen Reader with Spatial Bounding-Box Filtering.
@@ -19,6 +20,14 @@ class ScreenSummarizerAccessibilityService : AccessibilityService() {
         const val TAG = "SummarizerAccService"
         var instance: ScreenSummarizerAccessibilityService? = null
             private set
+
+        fun stopService() {
+            instance?.let { service ->
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    service.disableSelf()
+                }
+            }
+        }
 
         /**
          * Inspects the currently active window and extracts all readable text nodes,

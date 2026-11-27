@@ -99,7 +99,7 @@ class FloatingOverlayService : Service() {
 
         startForeground(NOTIFICATION_ID, buildNotification())
         broadcastStatus()
-        return START_STICKY
+        return START_NOT_STICKY
     }
 
     private fun buildNotification(): Notification {
@@ -402,6 +402,7 @@ class FloatingOverlayService : Service() {
         prefs.isServiceEnabled = false
         isRunning = false
         dismissSummaryOverlay()
+        ScreenSummarizerAccessibilityService.stopService()
         bubbleView?.let {
             try {
                 windowManager.removeView(it)
